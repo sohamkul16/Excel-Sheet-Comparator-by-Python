@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel Sheet Comparator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffaa44; /* Chrome Yellow */
+            color: #ecf0f1;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50; /* Dark Blue */
+            padding: 100px 0;
+        }
+
+        h1 {
+            font-size: 120px; /* A bit bigger */
+            font-weight: bold; /* Bold text */
+            color: #ffaa44; /* Chrome Yellow */
+        }
+
+        .button {
+            display: block;
+            padding: 30px 60px; /* Slightly larger */
+            background-color: #2c3e50; /* Dark Blue */
+            color: #ffaa44; /* Chrome Yellow */
+            border: none;
+            cursor: pointer;
+            margin: 20px auto;
+            font-size: 30px; /* Slightly larger */
+            border-radius: 5px;
+            font-weight: bold; /* Bold text */
+        }
+
+        .button:hover {
+            background-color: #e07600; /* Slightly Darker Orange on Hover */
+        }
+
+        .description {
+            margin: 30px;
+            font-size: 40px; /* Doubled in size */
+            color: black;
+            text-align: center; /* Center-aligned */
+            font-weight: bold; /* Bold text */
+            font-size: medium;
+        }
+    </style>
+</head> 
+    <body>
+        <header>
+            <h1>EXCEL SHEET COMPARATOR</h1>
+        </header>
+        <form action="{{ url_for('comparefile') }}" method="post" enctype="multipart/form-data">
+            
+            <input type="file" class="button" name="SelectedExcelFile_1"
+                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+
+            <input type="file" class="button" name="SelectedExcelFile_2"
+                accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+
+            <input type="submit" class="button" value="Compare">
+
+            
+            <div class="description">
+                <p>Upgrade your Excel skills with our great Excel Sheet Comparator that lets you compare two sheets in the blink of an eye! Unleash your inner data wizard! <span style="font-weight: bold;"></span></p>
+                <p><center>Mentor: Chaintanya P. Garware</center></p>
+            </div>
+        </form>
+    </body> 
+</html>

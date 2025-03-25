@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Compare Excel Sheets</title>
+</head>
+<body>
+<h1>Compare Excel Sheets</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Column</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for column in df_compare.columns %}
+      <tr>
+        <td>{{ column }}</td>
+        <td>{{ df_compare[column] }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</body>
+</html>
